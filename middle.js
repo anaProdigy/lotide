@@ -34,12 +34,12 @@ const middle = function(array) {
 
   } else if (array.length % 2 !== 0) {
    let midIndexOdd = Math.floor(array.length / 2);
-   middleArray = array[midIndexOdd];
+   middleArray.push(array[midIndexOdd]);
     
   } else {
     let midIndexEven1 = Math.floor(array.length / 2);
     let midIndexEven2 = Math.floor(array.length / 2) - 1;
-    middleArray = array[midIndexEven1, midIndexEven2];
+    middleArray.push(array[midIndexEven2], array[midIndexEven1]);
   }
   return middleArray;
 };
@@ -55,4 +55,4 @@ middle([1, 2, 3, 4, 5]); // => [3]
 console.log(middle([1, 2, 3, 4])); // => [2, 3]
 middle([1, 2, 3, 4, 5, 6]); // => [3, 4]
 
-//assertArraysEqual(middle([1, 2]))
+assertArraysEqual(middle([1, 2]), [])

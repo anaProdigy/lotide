@@ -23,11 +23,50 @@ const eqArrays = function(array1, array2) {
 };
 
 
+const assertArraysEqual = function(array1, array2) {
+  if (!eqArrays(array1, array2)) {
+    console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`);
+  } else {
+    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
+  }
+}
 
+
+
+const eqObjects = function(object1, object2) {
+
+  let array1 = Object.keys(object1);
+  let array2 = Object.keys(object2);
+  // console.log("array1: ", array1)
+  //   console.log("array2: ", array2)
+  if (array1.length !== array2.length) {
+    return false;
+  }
+  for (let key of array1) {
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      if (!eqArrays(object1[key], object2[key]))
+        return false;
+    }
+
+  }
+
+  return true;
+};
 
 
 
 // FUNCTION IMPLEMENTATION
 const assertObjectsEqual = function(actual, expected) {
-  // Implement me!
+  const inspect = require('util').inspect;
+  console.log(`Example label: ${inspect(actual)}`);
+
+  if (eqObjects(actual, expected)) {
+    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+  } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+  }
 };
+
+const ab = { a: "5", b: "2" };
+const ba = { b: "2", a: "5" };
+assertObjectsEqual(ab, ba);

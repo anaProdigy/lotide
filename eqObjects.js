@@ -19,7 +19,7 @@ const eqArrays = function(array1, array2) {
     }
   }
   return true;
-}
+};
 
 
 // Returns true if both objects have identical keys with identical values.
@@ -33,14 +33,15 @@ const eqObjects = function(object1, object2) {
     return false;
   }
   for (let key of array1) {
-    if (array1[key] !== array2[key]) {
-      return false;
-    } else {
-      return true;
+    if (Array.isArray(array1[key]) && Array.isArray(array2[key])) {
+      if (!eqArrays(array1, array2))
+        return false;
     }
+    return true;
+
   }
 
-
+  return false;
 };
 
 

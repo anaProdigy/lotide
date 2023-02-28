@@ -29,21 +29,45 @@ const assertArraysEqual = function(array1, array2) {
 
 
 //NEW FUNCTION
-const letterPositions = function(string) {
+
+const letterPositions = (str) => {
   const results = {};
 
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] !== " ") {
-      if (results[string[i]]) {
-        results[string[i]].push(i);
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
+      if (results[str[i]]) {
+        results[str[i]].push(i);
       } else {
-        results[string[i]] = [i];
+        results[str[i]] = [i];
       }
+
     }
   }
-  // logic to update results here
+
+
   return results;
 };
 
-console.log(letterPositions("hello"))
-assertArraysEqual(letterPositions("hello").e, [1]);
+//console.log(letterPositions("hello"));
+console.log(letterPositions("lighthouse in the house"));
+//assertArraysEqual(letterPositions("hello").e, [1]);
+
+//assertArraysEqual(letterPositions("lighthouse in the house").l, [0]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,26 +6,35 @@
 // The map function will return a new array based on the results of the callback function.
 
 
-
-
-const map = function(array, callback) {
+const words = ["ground", "control", "to", "major", "tom"];
+const map = (array, callback) => {
   const results = [];
- 
   for (let item of array) {
-    // console.log('item BEFORE: ', item);
-    // console.log('item AFTER: ', callback(item));
-    // console.log('---');
-
     results.push(callback(item));
   }
 
+
   return results;
+
+
 }
 
+const result1 = map(words, word => word[0])
+console.log(result1);
 
 
 
-// FUNSTIONS FOR TESTING
+
+
+
+
+
+
+
+
+
+
+// // FUNSTIONS FOR TESTING
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
@@ -52,20 +61,24 @@ const assertArraysEqual = function(array1, array2) {
 };
 
 
-// TEST 1
+// // TEST 1
 const words2 = ["ground", "control", "to", "major", "tom"];
 const results2 = map(words2, word => word[0]);
 const expectedResult = ['g', 'c', 't', 'm', 't'];
 assertArraysEqual(results2, expectedResult);
 
-// TEST 2
+// // TEST 2
 const words3 = [];
 const results3 = map(words3, word => word[0]);
 const expectedResult3 = [];
 assertArraysEqual(results3, expectedResult3);
 
-// TEST 3
+// // TEST 3
 const words4 = ["dog"];
 const results4 = map(words4, word => word[0]);
 const expectedResult4 = ['d'];
 assertArraysEqual(results4, expectedResult4);
+
+
+
+

@@ -4,22 +4,21 @@
 // The array to work with
 // The callback(which Lodash calls "predicate");
 
-const takeUntil = function(array, callback) {
-  const results = [];
+const takeUntil = (array, callback) => {
+const newArray = [];
 
-  for (const item of array) {
+for (const item of array) {
 
-    //callback returns a truthy value
-    const value = callback(item)
-    if (value) {
-      return results;
-    }
-    results.push(item);
-
+  if (callback(item)) {
+    break;
   }
+  newArray.push(item);
+}
+return newArray;
+}
 
-  return results;
-};
+
+
 
 
 
@@ -55,13 +54,13 @@ const results1 = takeUntil(data1, x => x < 0);
 const expectedResults1 = [1, 2, 5, 7, 2];
 assertArraysEqual(results1, expectedResults1);
 
-//TEST CASE 2
+// //TEST CASE 2
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 const results2 = takeUntil(data2, x => x === ',');
 const expectedResults2 = ['I\'ve', 'been', 'to', 'Hollywood'];
 assertArraysEqual(results2, expectedResults2);
 
-//TEST CASE 3
+// //TEST CASE 3
 const data3 = [];
 const results3 = takeUntil(data3, x => x === ',');
 const expectedResults3 = [];

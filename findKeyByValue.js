@@ -25,38 +25,6 @@ const findKeyByValue = (obj, val) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const findKeyByValue = (object, value) => {
-
-
-//   for (let key of Object.keys(object)) {
-//     if (object[key].includes(value)) {
-//       return key;
-
-//     }
-//   }
-
-
-//   return;
-// };
-
 //Test cases
 const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
@@ -64,13 +32,13 @@ const bestTVShowsByGenre = {
   drama: "The Wire"
 };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-assertEqual(findKeyByValue(bestTVShowsByGenre), undefined);
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+// assertEqual(findKeyByValue(bestTVShowsByGenre), undefined);
 
 
 
-
+module.exports = findKeyByValue;
 
 
 

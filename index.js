@@ -20,8 +20,8 @@ const flatten = require('./flatten');
 const flatten = require('./flatten');
 
 module.exports = {
-  head,
-  tail,
+  head: head, // older version, if head is a variable that contains a value for the key head
+  tail: tail,
   middle,
   assertArraysEqual,
   assertEqual,

@@ -4,7 +4,6 @@ const tail = (array) => {
     newArray.push(array[i]);
   }
   return newArray;
-
 };
 
 

@@ -8,23 +8,10 @@ const countOnly = function(allItems, itemsToCount) {
       } else {
         results[item] = 1;
       }
-    } else {
-      results[item] = 0;
     }
   }
-
-  const filteredResults = {};
-
-  for (const item in itemsToCount) {
-    if (itemsToCount[item] && results[item]) {
-      filteredResults[item] = results[item];
-    } else {
-      filteredResults[item] = 0;
-    }
-  }
-  return filteredResults;
+  return results;
 };
-
 
 
 

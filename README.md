@@ -12,7 +12,7 @@ This project was created and published by me as part of my learnings at Lighthou
 
 **Install it:**
 
-`npm install @username/lotide`
+`npm install @ana_prodigy/lotide`
 
 **Require it:**
 
@@ -21,6 +21,12 @@ This project was created and published by me as part of my learnings at Lighthou
 **Call it:**
 
 `const results = _.tail([1, 2, 3]) // => [2, 3]`
+
+**Execute the test:**
+***From the terminal***
+`npm test`
+***We can also specify a particular file to run:***
+`npm test test/tailTest.js`
 
 ## Documentation
 

@@ -1,12 +1,5 @@
-// const assertEqual = require('./assertEqual');
-// const eqArrays = require('./eqArrays');
-// const assertArraysEqual = require('./assertArraysEqual');
-
 const eqObjects = require('./eqObjects');
 
-
-
-// FUNCTION IMPLEMENTATION
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
@@ -14,7 +7,6 @@ const assertObjectsEqual = function(actual, expected) {
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`)
   }
-  
 };
 
 const ab = { a: "5", b: "2" };

@@ -8,15 +8,11 @@ const letterPositions = (str) => {
       } else {
         results[str[i]] = [i];
       }
-
     }
   }
-
-
   return results;
 };
 
-//console.log(letterPositions("hello"));
 
 
 module.exports = letterPositions;

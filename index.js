@@ -4,7 +4,7 @@ const middle = require('./middle');
 const assertArraysEqual = require('./assertArraysEqual');
 const assertEqual = require('./assertEqual');
 const assertObjectsEqual = require('./assertObjectsEqual');
-const countLetter = require('./countLetter');
+const countLetters = require('./countLetters');
 const countOnly = require('./countOnly');
 const eqArrays = require('./eqArrays');
 const eqObjects = require('./eqObjects');
@@ -20,13 +20,13 @@ const flatten = require('./flatten');
 const flatten = require('./flatten');
 
 module.exports = {
-  head: head, // older version, if head is a variable that contains a value for the key head
-  tail: tail,
+  head, 
+  tail,
   middle,
   assertArraysEqual,
   assertEqual,
   assertObjectsEqual,
-  countLetter,
+  countLetters,
   countOnly,
   eqArrays,
   eqObjects,

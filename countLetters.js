@@ -1,6 +1,3 @@
-const assertEqual = require('./assertEqual');
-
-
 const countLetters = (str) => {
   let result = {};
   const separated = str.split("");
@@ -8,22 +5,17 @@ const countLetters = (str) => {
   for (let letter of separated) {
     if (letter !== " ") {
       if (result[letter]) {
-        
         result[letter] += 1;
       } else {
         result[letter] = 1;
       }
     }
   }
-
-  console.log("result", result);
-
   return result;
-
 };
 console.log(countLetters("lighthouse in the house"));
 
-//countLetters("lighthouse in the house");
+
 
 
 

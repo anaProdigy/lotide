@@ -1,23 +1,17 @@
-const eqArrays = require('./eqArrays');
 const assertArraysEqual = require('./assertArraysEqual');
-// The function will return a "slice of the array with elements taken from the beginning." It should keep going until the callback / predicate returns a truthy value.
-// It will take in two parameters as well:
 
-// The array to work with
-// The callback(which Lodash calls "predicate");
 
 const takeUntil = (array, callback) => {
-const newArray = [];
+  const newArray = [];
 
-for (const item of array) {
-
-  if (callback(item)) {
-    break;
+  for (const item of array) {
+    if (callback(item)) {
+      break;
+    }
+    newArray.push(item);
   }
-  newArray.push(item);
-}
-return newArray;
-}
+  return newArray;
+};
 
 
 

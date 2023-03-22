@@ -1,17 +1,17 @@
 const flatten = (array) => {
-const newArray = [];
+  const newArray = [];
 
-for( const item of array) {
-  if(!Array.isArray(item)) {
-    newArray.push(item)
-  } else {
-    for (const element of item) {
-      newArray.push(element)
+  for (const item of array) {
+    if (!Array.isArray(item)) {
+      newArray.push(item);
+    } else {
+      for (const element of item) {
+        newArray.push(element);
+      }
     }
   }
-}
-return newArray;
-}
+  return newArray;
+};
 
 
 

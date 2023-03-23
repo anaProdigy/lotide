@@ -17,7 +17,7 @@ const middle = require('./middle');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
 const flatten = require('./flatten');
-const flatten = require('./flatten');
+
 
 module.exports = {
   head, 
@@ -35,7 +35,6 @@ module.exports = {
   flatten,
   letterPositions,
   map,
-  middle,
   takeUntil,
   without
 };
